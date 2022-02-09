@@ -11,5 +11,10 @@ function sayHello(input) {
 //    } else {
 //        return "Hello, Jane!";
 //    }
-    return "Hello, " + input + "!";
+
+    if (input === undefined || input === true || input === false) {
+        return "Hello, World!";
+    } else {
+        return "Hello, " + input + "!";
+    }
 }
