@@ -22,10 +22,11 @@ function sayHello(input) {
     } else {
         return "Hello, " + input + "!";
     }
+    // if (typeof input !== "string" || isNaN(input))
 }
 
 function isFive(num) {
-    if (num == 5) {
+    if (num == 5 || num === 'five') {
         return true;
     } else {
         return false;
@@ -41,3 +42,24 @@ function isEven(num1) {
         return false;
     }
 }
+
+/*
+function isVowel(input1) {
+    input1 = input1.toLowerCase();
+    let listOfVowels = 'aeiou'
+    //([ 'a' || 'e' || 'i' || 'o' || 'u']) {
+    if (listOfVowels.includes(input1)) {
+        return true;
+     } else {
+        return false;
+}
+ */
+/*
+function add(input2, input3) {
+    if (isNaN(input2) || isNaN(input3)) {
+        return false;
+    } else {
+        return parseInt(input2) + parseInt(input3);
+    }
+}
+ */

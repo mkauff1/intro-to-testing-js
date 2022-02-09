@@ -63,6 +63,12 @@ describe('isFive', function() {
     it('should return true when the number 5 is executed even as a string', function() {
         expect(isFive("5")).toBe(true);
     });
+    it('should return true when the number 5 is executed even as a string', function() {
+        expect(isFive("five")).toBe(true);
+    });
+//    it('should return true when the number 5 is executed even as a string', function() {
+//        expect(isFive("FIVE")).toBe(true);
+//    });
     it('should return false when any number besides 5 is executed ', function() {
         expect(isFive(typeof(Number))).toBe(false);
     });
@@ -103,3 +109,17 @@ describe('isEven', function() {
         expect(isEven()).toBe(false);
     });
 });
+
+/*
+describe('isVowel', function() {
+    it('should be a defined function', function () {
+        expect(typeof isVowel).toBe('function');
+    });
+    it('should return a boolean when called', function () {
+        expect(typeof isVowel()).toBe('boolean');
+    });
+    it('should return true when the string is a vowel, like a', function() {
+        expect(isVowel('a')).toBe(true);
+    });
+});
+*/
