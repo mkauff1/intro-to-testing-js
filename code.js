@@ -12,7 +12,12 @@ function sayHello(input) {
 //        return "Hello, Jane!";
 //    }
 
-    if (input === undefined || input === true || input === false) {
+//    if (input === undefined || input === true || input === false) {
+//        return "Hello, World!";
+//    } else {
+//        return "Hello, " + input + "!";
+//    }
+    if(input === typeof(Boolean) || input === typeof(Number) || input === "" || input === null || input === undefined) {
         return "Hello, World!";
     } else {
         return "Hello, " + input + "!";

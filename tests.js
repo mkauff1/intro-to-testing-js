@@ -34,9 +34,18 @@ describe('sayHello', function() {
         expect(sayHello()).toBe("Hello, World!");
     });
     it('should return the string "Hello, World!" when executed', function() {
-        expect(sayHello(true)).toBe("Hello, World!");
+        expect(sayHello(typeof(Boolean))).toBe("Hello, World!");
+   });
+    it('should return the string "Hello, World!" when executed', function() {
+        expect(sayHello(typeof(Number))).toBe("Hello, World!");
     });
     it('should return the string "Hello, World!" when executed', function() {
-        expect(sayHello(false)).toBe("Hello, World!");
+        expect(sayHello(null)).toBe("Hello, World!");
+    });
+    it('should return the string "Hello, World!" when executed', function() {
+        expect(sayHello(undefined)).toBe("Hello, World!");
+    });
+    it('should return the string "Hello, World!" when executed', function() {
+        expect(sayHello("")).toBe("Hello, World!");
     });
 });
