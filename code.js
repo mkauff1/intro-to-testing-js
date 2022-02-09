@@ -31,3 +31,13 @@ function isFive(num) {
         return false;
     }
 }
+
+function isEven(num1) {
+    if (num1 % 2 === 0) {
+        return true;
+    } else if (typeof num1 === "boolean") {
+        return false;
+    } else {
+        return false;
+    }
+}

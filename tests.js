@@ -54,9 +54,9 @@ describe('isFive', function() {
     it('should be a defined function', function() {
         expect(typeof isFive).toBe('function');
     });
-//    it('should return a boolean when called', function() {   ASK
-//        expect(typeof isFive()).toBe(typeof(Boolean));
-//    });
+    it('should return a boolean when called', function() {
+        expect(typeof isFive()).toBe("boolean");
+    });
     it('should return true when the number 5 is executed', function() {
         expect(isFive(5)).toBe(true);
     });
@@ -65,5 +65,41 @@ describe('isFive', function() {
     });
     it('should return false when any number besides 5 is executed ', function() {
         expect(isFive(typeof(Number))).toBe(false);
+    });
+});
+
+describe('isEven', function() {
+    it('should be a defined function', function () {
+        expect(typeof isEven).toBe('function');
+    });
+    it('should return a boolean when called', function () {
+        expect(typeof isEven()).toBe("boolean");
+    });
+    it('should return true when the number is even', function() {
+        expect(isEven(2)).toBe(true);
+    });
+    it('should return true even when the number is negative even', function() {
+        expect(isEven(-4)).toBe(true);
+    });
+    it('should return false when the number is odd', function() {
+        expect(isEven(3)).toBe(false);
+    });
+    it('should return false when the string is banana', function() {
+        expect(isEven("banana")).toBe(false);
+    });
+    it('should return true when the number is 8', function() {
+        expect(isEven(8)).toBe(true);
+    });
+    it('should return false when the number is Infinity', function() {
+        expect(isEven(Infinity)).toBe(false);
+    });
+    it('should return false when the input is a true boolean', function() {
+        expect(isEven(true)).toBe(false);
+    });
+    it('should return false when the input is a false boolean', function() {
+        expect(isEven(false)).not.toBe(false);
+    });
+    it('should return false when there is no input', function() {
+        expect(isEven()).toBe(false);
     });
 });
